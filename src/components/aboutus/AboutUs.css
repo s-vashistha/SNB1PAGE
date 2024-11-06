@@ -1,0 +1,29 @@
+.about-container {
+    max-width: 80%;
+    margin: auto; 
+    box-shadow:0 6px 8px  #9683BD;
+    border-radius: 8px;
+    background:radial-gradient(rgba(54, 7, 81, 0.867),black) ;
+    text-align: center;
+    width: fit-content; 
+    padding: 20px 13px;
+    position: relative;
+   
+   
+  }
+  
+  .about-heading {
+    font-size: 3em;
+    gap: 6rem;
+    color: antiquewhite;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    
+  }
+  
+  .about-paragraph {
+    font-size: 1em;
+    line-height: 1.6;
+    color:whitesmoke;
+  }
+  

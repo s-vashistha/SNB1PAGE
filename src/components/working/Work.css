@@ -1,0 +1,15 @@
+.image-container {
+    text-align: center;
+  }
+  
+  .heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .responsive-image {
+    max-width: max-content;
+    height: auto;
+    margin-left: 40px;
+  }
+  

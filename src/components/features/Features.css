@@ -1,0 +1,104 @@
+/* Main Container */ 
+.Reasons {
+  display: flex;
+  gap: 31rem;
+  width: 93%;
+  padding: 1px 3rem;
+  position: relative; /* Ensure positioning for the dash container */
+}
+
+/* Left Section - Swiper Slider */
+.left-r {
+  flex: 1 1;
+  flex-direction: row;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 10px;
+  position: relative;
+  max-width: fit-content;
+  margin-right: 10px;
+}
+
+/* Slider Image Styling */
+.slick-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Custom Dash Container */
+.custom-dash-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px; /* Space between dashes */
+  position: absolute;
+  bottom: -30px; /* Adjust to position below the slider */
+  left: 0;
+  width: 100%;
+}
+
+/* Dash Styling */
+.dash {
+  width: 30px;
+  height: 5px;
+  background-color: lightgray;
+  transition: background-color 0.3s ease;
+}
+
+.dash.active {
+  background-color: black; /* Active dash color */
+}
+
+/* Right Section */
+.right-r {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding-left: 2rem;
+  text-transform: uppercase;
+  margin: auto;
+  width: 50%;
+}
+
+.stroke-text {
+  font-size: 4.5rem;
+}
+
+.details-r div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: antiquewhite;
+}
+
+.partners {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Remove Default Dots from Slick */
+.slick-dots {
+  display: none; /* Hide the default dots */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .Reasons {
+    flex-direction: column;
+  }
+
+  .right-r {
+    padding-left: 0;
+  }
+
+  .custom-dash-container {
+    bottom: -20px; /* Adjust dash position for smaller screens */
+  }
+}
+
