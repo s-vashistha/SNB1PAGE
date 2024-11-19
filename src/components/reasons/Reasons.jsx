@@ -1,9 +1,9 @@
 import React from 'react';
 import hero_image_back from "../../assets/hero_image_back.png";
-import image1 from "../../assets/image1.png";
-import image2 from "../../assets/image2.png";
-import image3 from "../../assets/image3.png";
-import image4 from "../../assets/image4.png";
+import app1 from "../../assets/app1.png";
+import app2 from "../../assets/app2.png";
+import app3 from "../../assets/app3.png";
+import app4 from "../../assets/app4.png";
 import Rid from "../../assets/Rid.png";
 import tick from "../../assets/tick.png";
 // Import Bootstrap first // Import Bootstrap first
@@ -13,10 +13,10 @@ const Reasons = () => {
   return (
     <div className="Reasons" id="reasons">
         <div className="left-r">
-            <img src={image1} alt="" />
-            <img src={image2} alt="" />
-            <img src={image3} alt="" />
-            <img src={image4} alt="" />
+            <img src={app1} alt="" />
+            <img src={app2} alt="" />
+            <img src={app3} alt="" />
+            <img src={app4} alt="" />
         </div>
 
         <div className="right-r">

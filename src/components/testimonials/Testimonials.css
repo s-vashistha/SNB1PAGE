@@ -1,7 +1,13 @@
 .testimonials {
     display: flex;
     gap: 1rem;
-    padding: 0 2rem;
+    padding: 20px 2rem;
+    margin-top: 7rem;
+     /* background-color: #76ccd0 ;   */
+    /* #0b7f85 ; */
+    margin: auto; 
+    box-shadow: -1px -1px 14px 2px #9683BD;
+    border-radius: 8px;
 }
 
 .left-t {
@@ -49,7 +55,7 @@
     position: absolute;
     width: 17rem;
     height: 20rem;
-    border: 2px solid orange;
+    border: 2px solid #9683BD;
     background-color: transparent;
     right: 9rem;
     top: 0.9rem;

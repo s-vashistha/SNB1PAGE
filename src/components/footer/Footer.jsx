@@ -1,38 +1,50 @@
-//footer.jsx
 import React from 'react';
-import Github from '../../assets/github.png';
+
+import Email from '../../assets/email.png';
+import Facebook from '../../assets/facebook.png';
 import Instagram from '../../assets/instagram.png';
 import LinkedIn from '../../assets/linkedin.png';
 import Rid from '../../assets/Rid.png';
-// Import Bootstrap first // Import Bootstrap first
 import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className="Footer-container">
-        <hr/>
-        <div className="footer">
-            <div className="social-links">
-                <img src={Github} alt="" />
-                <img src={Instagram} alt=""/>
-                <img src={LinkedIn} alt=""/>
-            </div>
-            <div className="social-links">
-            <p>WhatsApp: +91- 9667229080  </p>                                      
-            <p>How may I help: +91-9667229080</p>
-            <p>Website: www.myanimal.in. </p>                                         
-            <p> www.infoigy.com</p>
-            <p>Email ID: info@infoigy.com</p>
-</div>
-            </div>
-            <div className="logo-f">
-                <img src={Rid} alt=""/>
-            </div>
-        
-        {/* <div className="blur blur-f-1"></div>
-        <div className="blur blur-f-2"></div> */}
+    <div className="footer-container">
+     
+      <div className="logo-f">
+        <img src={Rid} alt="Logo" />
+      </div>
+      <div className="footer-content">
+        <div className="social-links">
+          
+        <a 
+      href="https://www.facebook.com/yourpage" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img src={Facebook} alt="Facebook" />
+    </a>
+          
+         <a href='hvhjvh'> <img src={Instagram} alt="Instagram" /></a>
+         <a href='hvhjvh'><img src={LinkedIn} alt="LinkedIn" /></a>
+          <a href="mailto:infoigy@gmail.com" target="_blank" rel="noopener noreferrer">
+          <img src={Email} alt="Email" /> </a>
+          
+        </div>
+        <div className="contact-info">
+    <div className="contact-item">
+        <p><strong>WhatsApp:</strong> +91-9667229080</p>
+        <p><strong>How may I help:</strong> +91-9667229080</p>
     </div>
-  )
-}
+    <div className="contact-item">
+        <p><strong>Website:</strong> www.myanimal.in</p>
+        <p><strong>Alternative Website:</strong> www.infoigy.com</p>
+    </div>
+</div>
+
+      </div>
+    </div>
+  );
+};
 
 export default Footer;

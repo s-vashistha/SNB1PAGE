@@ -14,8 +14,8 @@ const Testimonials = () => {
 
     return (
         <div className="testimonials">
-            <div className="left-t">
-                <span>Testimonials</span>
+            <div className="left-t ">
+                <span className='section-heading'>Testimonials</span>
                 <span className="stroke-text">What they</span>
                 <span>say about us</span>
                 <motion.span

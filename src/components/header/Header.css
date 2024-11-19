@@ -1,40 +1,137 @@
+/* General Header Styling */
 .header {
-    display: flex;
-    justify-content: space-between;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Lato', sans-serif;
+  z-index: 100;
 }
-.header>h2{
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: aliceblue;
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  flex-wrap: wrap;
 }
 
 .logo {
-    width: 5rem;
-    height: 3rem;
-}
-.header-menu {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    color: white;
-    margin-top: 2rem;
-}
-.header-menu > li:hover {
-    color: var(--orange);
-    cursor: pointer;
-    background-color: grey;
+  display: flex;
+  align-items: center;
+  margin-left: 56px;
 }
 
+.logo-image {
+  width: 3.5rem;
+  height: 3rem;
+}
+
+.brandname {
+  margin-left: 8px;
+  width: 5rem;
+  height: auto;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.location-pin {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu > li {
+  font-size: 15px;
+  font-weight: 500;
+  color: #011e32;
+}
+
+.header-menu > li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-menu > li:hover {
+  color: rgba(54, 7, 81, 0.867);
+  cursor: pointer;
+}
+
+.login-signup {
+  margin-left: 20px;
+}
+
+.btn-primary {
+  color: white;
+  background-color: rgba(54, 7, 81, 0.867);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .header > :nth-child(2) {
-        position: fixed;
-        right: 2rem;
-        z-index: 99;
-    }
-    .header-menu {
-        flex-direction: column;
-        background-color: var(--appColor);
-        padding: 5rem;
-    }
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .header-menu {
+    flex-direction: column;
+    display: none;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-menu.open {
+    display: flex;
+  }
+
+  .header-menu > li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .btn-primary {
+    font-size: 16px;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .location {
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    font-size: 12px;
+  }
 }

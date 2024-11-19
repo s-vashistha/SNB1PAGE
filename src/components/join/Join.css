@@ -1,7 +1,8 @@
 .Join {
     display: flex;
-    padding: 0 2rem;
+    padding: 0 5rem;
     gap: 10rem;
+    margin-top: 6rem;
 }
 
 .left-j {
@@ -34,7 +35,7 @@
 .email-container {
     display: flex;
     gap: 3rem;
-    background-color: gray;
+    background-color:rgba(54, 7, 81, 0.867);
     padding: 1rem 2rem;
 }
 

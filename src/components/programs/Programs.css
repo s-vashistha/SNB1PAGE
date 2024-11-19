@@ -5,15 +5,18 @@
     flex-direction: column;
     gap: 4rem;
     position: relative;
+    margin-top: 10rem;
+    background-color: rgb(255, 255, 255);
 }
 .programs-header {
     display: flex;
     justify-content: center;
-    color: white;
+    color: rgb(0, 0, 0);
     gap: 6rem;
     font-weight: bold;
     font-size: 3rem;
     text-transform: uppercase;
+    margin-top: 4rem;
 }
 .programs-blur-1 {
     width: 32rem;
@@ -44,6 +47,7 @@
     gap: 2rem;
     padding: 1.5rem;
     width: 15rem;
+    margin-bottom: 5rem;
 }
 
 .program:nth-child(2) {

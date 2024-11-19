@@ -25,7 +25,7 @@ const FAQ = () => {
           </div>
           {activeIndex === index && (
             <div className="faq-answer">
-              <p>{item.answer}</p>
+              <p align="left">{item.answer}</p>
             </div>
           )}
         </div>

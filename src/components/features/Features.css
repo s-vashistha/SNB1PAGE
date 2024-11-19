@@ -1,104 +1,98 @@
-/* Main Container */ 
-.Reasons {
-  display: flex;
-  gap: 31rem;
-  width: 93%;
-  padding: 1px 3rem;
-  position: relative; /* Ensure positioning for the dash container */
-}
+.features-container {
+  padding: 30px;
+  text-align: center;
+ 
+  background-color: white;
+  background: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+ 
+  margin: 60px;
+  margin-top: -10px;
 
-/* Left Section - Swiper Slider */
-.left-r {
-  flex: 1 1;
-  flex-direction: row;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin-left: 10px;
-  position: relative;
-  max-width: fit-content;
-  margin-right: 10px;
 }
-
-/* Slider Image Styling */
-.slick-slide img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Custom Dash Container */
-.custom-dash-container {
+.features-header {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
-  gap: 10px; /* Space between dashes */
+  color: rgb(0, 0, 0);
+  gap: 6rem;
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.4s;
+  margin-top: 4rem;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card h3 {
+  font-size: 1.5em;
+  color: rgb(57, 0, 60);
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #666;
+}
+
+.card li {
+  padding: 0.5rem 0;
+}
+
+.hover-content {
+  display: none;
   position: absolute;
-  bottom: -30px; /* Adjust to position below the slider */
+  top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: auto;
 }
 
-/* Dash Styling */
-.dash {
-  width: 30px;
-  height: 5px;
-  background-color: lightgray;
-  transition: background-color 0.3s ease;
+.card:hover .hover-content {
+  display: block;
 }
 
-.dash.active {
-  background-color: black; /* Active dash color */
+.hover-content table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Right Section */
-.right-r {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  padding-left: 2rem;
-  text-transform: uppercase;
-  margin: auto;
-  width: 50%;
+.hover-content th, .hover-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
 }
 
-.stroke-text {
-  font-size: 4.5rem;
+.hover-content th {
+  background: #007acc;
+  color: #fff;
 }
-
-.details-r div {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1rem;
-  color: antiquewhite;
-}
-
-.partners {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Remove Default Dots from Slick */
-.slick-dots {
-  display: none; /* Hide the default dots */
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .Reasons {
-    flex-direction: column;
-  }
-
-  .right-r {
-    padding-left: 0;
-  }
-
-  .custom-dash-container {
-    bottom: -20px; /* Adjust dash position for smaller screens */
-  }
-}
-
