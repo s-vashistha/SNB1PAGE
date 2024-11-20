@@ -33,9 +33,10 @@ function App() {
             <>
             <Header/>
             <Dashboard />
-            <Carousel/>
-            <Workcard/>
+            
               <About />
+              {/* <Carousel/> */}
+            <Workcard/>
               <Features />
               {/* <Work /> */}
               <Mobapp/>

@@ -1,18 +1,18 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import React, { useState, useEffect } from "react";
-import { Carousel } from 'react-responsive-carousel';
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import image1 from "../../assets/image1.png";
 import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
-import './AboutUs.css';
+import "./AboutUs.css";
 
 const paragraphs = [
   "A smart Neckband is a wearable device that serves multifaceted functions, encompassing vital signs monitoring, activity tracking, location tracking, behavioural analysis, fertility particularly in dairy cattle.",
   "Utilising machine learning models & sophisticated analytics to transform data into practical guidance for pet owners, veterinary professionals & researchers.",
   "The wireless & GSM-based device is typically worn around the neck of the animal and is equipped with various sensors which monitor health, and behaviour that measures key reproductive parameters, such as body temperature, heart rate, activity level, and rumination patterns.",
   "The data collected by the smart neckband is then transmitted to the animal owner's smartphone or computer, enabling real-time tracking and monitoring of the animal's health.",
-  "The device uses advanced technologies such as AI/ML algorithms to analyse the health data and provide valuable insights into the animal's health report."
+  "The device uses advanced technologies such as AI/ML algorithms to analyse the health data and provide valuable insights into the animal's health report.",
 ];
 
 const AboutUs = () => {
@@ -38,9 +38,13 @@ const AboutUs = () => {
   };
 
   return (
-    <section id="aboutus">
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-        <div className="about-container" style={{ height: 'auto' }}>
+    <section id="aboutus" style={{ backgroundColor: "#5128681c" }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="about-container" style={{ height: "auto" }}>
           {/* Carousel Section */}
           <div className="about-carousel-container">
             <Carousel
@@ -64,28 +68,33 @@ const AboutUs = () => {
           </div>
 
           {/* About Us Text Content with Carousel Effect */}
-          <div className="about-content">
+          <div className="about-content" style={{backgroundColor:"white"}}>
             <div className="about-header">
               <span className="section-heading">ABOUT US</span>
             </div>
 
-            <div className="carousel-content">
-              <AnimatePresence mode="wait">
-                <motion.p
-                  key={currentSlide}
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -100 }}
-                  transition={{ duration: 0.5 }}
-                  className="about-paragraph"
-                >
-                  {paragraphs[currentSlide]}
-                </motion.p>
-              </AnimatePresence>
-              <div className="carousel-controls">
-                <button onClick={prevSlide} className="arrow-button">←</button>
-                <button onClick={nextSlide} className="arrow-button">→</button>
-              </div>
+            <div className="about-text-content" style={{ textAlign: "left" }}>
+              <p className="about-paragraph">
+                {/* Add your content here */}A smart Neckband is a wearable
+                device that serves multifaceted functions, encompassing vital
+                signs monitoring, activity tracking, location tracking,
+                behavioural analysis, fertility particularly in dairy cattles.
+              
+
+                Utilising machine learning models & sophisticated analytics to
+                transform data into practical guidance for pet owners,
+                veterinary professionals & researchers The wireless & GSM-based
+                device is typically worn around the neck of the animal and is
+                equipped with various sensors which monitor health, and
+                behaviour that measures key reproductive parameters, such as
+                body temperature, heart rate, activity level, and rumination
+                patterns. The data collected by the smart neckband is then
+                transmitted to the animal owner's smartphone or computer,
+                enabling real-time tracking and monitoring of the animal's
+                health. The device uses advanced technologies such as AI/ML
+                algorithms to analyse the health data and provide valuable
+                insights into the animal's health report.
+              </p>
             </div>
           </div>
         </div>

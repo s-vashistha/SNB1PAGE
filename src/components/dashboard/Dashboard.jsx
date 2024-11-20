@@ -22,7 +22,7 @@ const Dashboard = () => {
 
                     <div className="hero-text">
                          <div>
-                            <span className="stroke-text">Monitor Health <br />&</span>
+                            <span className="stroke-text-main">Monitor Health <br />&</span>
                             <span> Fitness <br/>
                             Of Your Pet.</span>
                         </div>  

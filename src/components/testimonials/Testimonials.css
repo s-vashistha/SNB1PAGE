@@ -1,45 +1,84 @@
 .testimonials {
     display: flex;
-    gap: 1rem;
-    padding: 20px 2rem;
+    flex-wrap: wrap;
+    gap: 0; /* No gaps between sections */
+    padding: 20px 0;
     margin-top: 7rem;
-     /* background-color: #76ccd0 ;   */
-    /* #0b7f85 ; */
-    margin: auto; 
-    box-shadow: -1px -1px 14px 2px #9683BD;
-    border-radius: 8px;
+    background-color: rgba(81, 40, 104, 0.11);
+    width: 100%; /* Full width */
+    box-shadow: none;
+    border-radius: 0;
+    align-items: center; /* Center all elements vertically */
 }
 
 .left-t {
     display: flex;
-    flex: 1 1;
+    flex: 1 1 40%; /* Adjust width to accommodate arrows */
     gap: 2rem;
     flex-direction: column;
+    padding: 0 2rem;
     text-transform: uppercase;
-    color: white;
+    color: #474646;
 }
 
-.left-t >:nth-child(1) {
+.left-t > :nth-child(1) {
     color: var(--orange);
     font-weight: bold;
 }
 
-.left-t >:nth-child(2),
-.left-t >:nth-child(3) {
+.left-t > :nth-child(2),
+.left-t > :nth-child(3) {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
-.left-t >:nth-child(4) {
+.left-t > :nth-child(4) {
     text-transform: none;
     text-align: justify;
-    letter-spacing: 2px;
-    line-height: 40px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.arrows {
+    display: flex;
+    flex: 0 0 auto; /* Fixed size */
+    gap: 1rem;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.arrows > img {
+    width: 2rem;
+    cursor: pointer;
 }
 
 .right-t {
-    flex: 1;
-    position: relative;
+    flex: 1 1 40%; 
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.right-t > :nth-child(1) {
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+    border: 2px solid #9683bd;
+    background-color: transparent;
+    right: 9rem; /* Adjusted for alignment */
+    top: 0.9rem;
+}
+
+.right-t > :nth-child(2) {
+    position: absolute;
+    width: 17rem;
+    height: 19rem;
+    top: 4rem;
+    right: 7rem; /* Adjusted for alignment */
+    background: var(--programCard);
 }
 
 .right-t>img {
@@ -49,68 +88,43 @@
     object-fit: cover;
     right: 8rem;
     top: 2rem;
+    /* z-index: 2; */
 }
-
-.right-t>:nth-child(1) {
-    position: absolute;
-    width: 17rem;
-    height: 20rem;
-    border: 2px solid #9683BD;
-    background-color: transparent;
-    right: 9rem;
-    top: 0.9rem;
-}
-
-.right-t>:nth-child(2) {
-    position: absolute;
-    width: 17rem;
-    height: 19rem;
-    top: 4rem;
-    right: 7rem;
-    background: var(--programCard);
-}
-
-.arrows {
-    display: flex;
-    position: absolute;
-    gap: 1rem;
-    bottom: 1rem;
-    left: 3rem;
-}
-
-.arrows>img {
-    width: 1.5rem;
-    cursor: pointer;
-}
-
 @media screen and (max-width: 768px) {
     .testimonials {
         flex-direction: column;
+        align-items: center;
     }
+
+    .left-t {
+        align-items: center;
+        padding: 0 1rem;
+    }
+
     .left-t > :nth-child(2),
     .left-t > :nth-child(3) {
-        font-size: xx-large;
+        font-size: 2rem;
     }
+
+    .arrows {
+        margin: 1rem 0;
+    }
+
     .right-t {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
+        margin-top: 2rem;
     }
-    .right-t > div {
+
+    .right-t > :nth-child(1),
+    .right-t > :nth-child(2) {
         position: relative;
-        display: none;
-    }
-    .right-t > img {
-        top: 0;
         right: 0;
-        position: relative;
-        align-self: center;
+        top: 0;
+        width: 100%;
+        max-width: 15rem;
+        margin: auto;
     }
-    .right-t > :last-child {
-        display: block;
-        bottom: 0;
-        left: 0;
+
+    .right-t > img {
+        max-width: 15rem;
     }
 }
